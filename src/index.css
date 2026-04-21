@@ -1,0 +1,17 @@
+:root {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #bebebe;
+}
+
+.counter-container {
+	display: flex;
+	font-size: 20pt;
+	gap: 0.250em;
+	& button {
+		width: 30px;
+		border: none;
+	}
+	& button:active {
+		background-color: salmon;
+	}
+}
