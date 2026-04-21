@@ -8,6 +8,24 @@ import Header from './components/Header/Header'
 import Greet from './components/Greet'
 import Counter from './components/Counter'
 
+let fVStore = [
+  { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
+  { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
+  { category: "Fruits", price: "$2", stocked: false, name: "Passionfruit" },
+  { category: "Vegetables", price: "$2", stocked: true, name: "Spinach" },
+  { category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin" },
+  { category: "Vegetables", price: "$1", stocked: true, name: "Peas" }
+]
+
+const people = [
+  'Creola Katherine Johnson: mathematician',
+  'Mario José Molina-Pasquel Henríquez: chemist',
+  'Mohammad Abdus Salam: physicist',
+  'Percy Lavon Julian: chemist',
+  'Subrahmanyan Chandrasekhar: astrophysicist'
+];
+
+
 // component
 function App() {
 
@@ -19,6 +37,11 @@ function App() {
 			<Header />
 			<Greet />
 			<Counter />
+			{/* <p>{JSON.stringify(fVStore)}</p> */}
+			{fVStore.map((item, i) => { return <h1 key={i}>{item.name}</h1> })}
+			<ul>
+				{people.map((item, i) => <li key={i}>{item}</li>)}
+			</ul>
 		</>
 	)
 }
